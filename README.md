@@ -241,3 +241,29 @@ The application should therefore be viewed as a case-study prototype demonstrati
 ## Case Study
 
 Built as part of the Hasamex AI Engineer technical case study.
+
+## Application Preview
+
+### Ask Across Expert Calls
+
+Ask natural-language questions across all three markets and receive evidence-grounded answers with exact supporting quotes and timestamps.
+
+![Ask Across Expert Calls](assets/ask.png)
+
+### Interview Guide Analysis
+
+Generate structured answers to the supplied interview guide using evidence retrieved directly from the expert calls.
+
+![Interview Guide](assets/interview-guide.png)
+
+### Cross-Call Insights
+
+Identify common themes, differences in emphasis, and disagreements across France, Germany, and the United Kingdom.
+
+![Cross-Call Insights](assets/cross-call-insights.png)
+
+### Timestamped Transcript Evidence
+
+Inspect the underlying expert-call transcripts and trace insights back to their original timestamped statements.
+
+![Transcript Evidence](assets/transcripts.png)
