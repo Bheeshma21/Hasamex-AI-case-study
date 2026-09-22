@@ -25,12 +25,30 @@ class AIEngine:
 
     def __init__(self):
 
+        # ---------------------------------------------------------
+        # API KEY
+        # ---------------------------------------------------------
+        # Local development:
+        #   Reads GROQ_API_KEY from the .env file.
+        #
+        # Streamlit Cloud:
+        #   Falls back to Streamlit Secrets.
+        # ---------------------------------------------------------
+
         api_key = os.getenv("GROQ_API_KEY")
+
+        if not api_key:
+            try:
+                import streamlit as st
+                api_key = st.secrets["GROQ_API_KEY"]
+            except Exception:
+                api_key = None
 
         if not api_key:
             raise ValueError(
                 "GROQ_API_KEY not found. "
-                "Add GROQ_API_KEY=your_key to the .env file."
+                "Configure it in the local .env file or "
+                "Streamlit Cloud Secrets."
             )
 
         self.client = Groq(api_key=api_key)
